@@ -63,4 +63,5 @@ And we `cd ` into `front ` and use `npm install `
 ### 6 - Finally
 
 Now you can `ng serve ` in the `front ` folder and have you Front and API apps available
-To access your apps got to [http://localhost:WhateverPortYouSetUpInTheEnvFile](http://localhost:WhateverPortYouSetUpInTheEnvFile)
+To access your apps got to [http://localhost:8080](http://localhost:8080) 
+Of course change the port to mach what you used in the .env file
