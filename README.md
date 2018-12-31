@@ -1,4 +1,4 @@
-# Front
+# Docker-Laravel-Angular
 
 This project is a docktorized skeleton for a laravel and angular Application.
 
@@ -13,11 +13,13 @@ This project is a docktorized skeleton for a laravel and angular Application.
 ### 1- Cloning the repo
 
     To clone the repo open your terminal in your projects directory and use this line:
+
     ```
     git clone https://github.com/tzgued/laravel-angular-skeleton.git ChooseAProjectName
     ```
 
     or this line if you are using ssh:
+    
     ```
     git clone git@github.com:tzgued/laravel-angular-skeleton.git ChooseAProjectName
     ```
