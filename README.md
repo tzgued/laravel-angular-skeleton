@@ -21,6 +21,9 @@ or this line if you are using ssh:
 ```
 git clone git@github.com:tzgued/laravel-angular-skeleton.git ChooseAProjectName
 ```
+
+Your projected is now cloned in the ChooseAProjectName directory
+
 ### 2 - Setting up the environement variables
 
 - Copy the `docker/.env.example` file into `docker/.env`
@@ -39,6 +42,7 @@ What this will do ? This will:
 - Install tools needed inside the containers
 
 ### 4 - SSH into container
+> This and the rest of the steps could be automated but I didn't for the perpose of learning and knowing what's happening :)
 
 Now we have our main container tha has all what needed to run the app: apache, php, node, angular CLI, ...
 We need to ssh into the container and install composer and npm dependencies.
@@ -51,7 +55,12 @@ Gitbash users on widows might need to add `winpty` for the command to work
 `winpty docker exec -it Container_Name bash`
 
 ### 5 - Installing the dependencies
-> This step could be automated but I didn't for the perpose of learning and knowing what's happening :)
 
 Inside the container, our working directory is `/var/www/html/`
-So now we need to `cd ` into api and user `composer install ` and `npm install `
+So now we need to `cd ` into `api ` and use `composer install ` and `npm install `
+And we `cd ` into `front ` and use `npm install `
+
+### 6 - Finally
+
+Now you can `ng serve ` in the `front ` folder and have you Front and API apps available
+To access your apps got to [http://localhost:WhateverPortYouSetUpInTheEnvFile](http://localhost:WhateverPortYouSetUpInTheEnvFile)
