@@ -1,0 +1,18 @@
+
+
+version: '3.1'
+services:
+  apache:
+    build: ./api/
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - "${LARAVEL_APP_PORT}:80"
+      - "${ANGULAR_APP_PORT}:4200"
+    volumes:
+      - ./config/vhosts_enabled:/etc/apache2/sites-enabled
+      - ./config/vhosts_available:/etc/apache2/sites-available
+      - ${DOCKER_APP_VOLUME:-../}:/var/www/html
+    expose:
+        - "4200"
+
+          
