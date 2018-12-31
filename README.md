@@ -4,13 +4,13 @@ This project is a docktorized skeleton for a laravel and angular Application.
 
 ## Requirements
 
-    1. Docker
-    2. Gitbash (For Windows users Only)
-    3. Git (For linux and MAC OS users)
+1. Docker
+2. Gitbash (For Windows users Only)
+3. Git (For linux and MAC OS users)
 
 ## Installation Steps
 
-### 1- Cloning the repo
+### 1 - Cloning the repo
 
 To clone the repo open your terminal in your projects directory and use this line:
 ```
@@ -21,37 +21,37 @@ or this line if you are using ssh:
 ```
 git clone git@github.com:tzgued/laravel-angular-skeleton.git ChooseAProjectName
 ```
-### 2- Setting up the environement variables
+### 2 - Setting up the environement variables
 
-    - Copy the `docker/.env.example` file into `docker/.env`
-    - Copy the `api/.env.example` file into `api/.env`
-    - Change the variables in each file as it suits you (if you are new to this, and you have no server running on your machine, you can use the default environnement variables)
+- Copy the `docker/.env.example` file into `docker/.env`
+- Copy the `api/.env.example` file into `api/.env`
+- Change the variables in each file as it suits you (if you are new to this, and you have no server running on your machine, you can use the default environnement variables)
 
-### 3- Create docker containers
+### 3 - Create docker containers
 
-    - `cd ` into the `docker ` folder
-    - execute `docker-compose up -d `
-    - Sit back and relax for a while
+- `cd ` into the `docker ` folder
+- execute `docker-compose up -d `
+- Sit back and relax for a while
 
-    What this will do ? This will:
-        - Pull docker images if you don't have them
-        - Create the containers using the `docker-compose.yml ` file, and the `config ` and `Dockerfiles `
-        - Install tools needed inside the containers
+What this will do ? This will:
+- Pull docker images if you don't have them
+- Create the containers using the `docker-compose.yml ` file, and the `config ` and `Dockerfiles `
+- Install tools needed inside the containers
 
-### 4- SSH into container
+### 4 - SSH into container
 
-    Now we have our main container tha has all what needed to run the app: apache, php, node, angular CLI, ...
-    We need to ssh into the container and install composer and npm dependencies.
-    To ssh into a docker container use:
+Now we have our main container tha has all what needed to run the app: apache, php, node, angular CLI, ...
+We need to ssh into the container and install composer and npm dependencies.
+To ssh into a docker container use:
 
-    `docker exec -it Container_Name bash`
+`docker exec -it Container_Name bash`
 
-    Gitbash users on widows might need to add `winpty` for the command to work
+Gitbash users on widows might need to add `winpty` for the command to work
 
-    `winpty docker exec -it Container_Name bash`
+`winpty docker exec -it Container_Name bash`
 
-### 5- Installing the dependencies
+### 5 - Installing the dependencies
 > This step could be automated but I didn't for the perpose of learning and knowing what's happening :)
 
-    Inside the container, our working directory is `/var/www/html/`
-    So now we need to `cd ` into api and user `composer install ` and `npm install `
+Inside the container, our working directory is `/var/www/html/`
+So now we need to `cd ` into api and user `composer install ` and `npm install `
