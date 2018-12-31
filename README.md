@@ -8,21 +8,19 @@ This project is a docktorized skeleton for a laravel and angular Application.
     2. Gitbash (For Windows users Only)
     3. Git (For linux and MAC OS users)
 
-## Instalation Steps
+## Installation Steps
 
 ### 1- Cloning the repo
 
-    To clone the repo open your terminal in your projects directory and use this line:
+To clone the repo open your terminal in your projects directory and use this line:
+```
+git clone https://github.com/tzgued/laravel-angular-skeleton.git ChooseAProjectName
+```
 
-    ```
-    git clone https://github.com/tzgued/laravel-angular-skeleton.git ChooseAProjectName
-    ```
-
-    or this line if you are using ssh:
-    
-    ```
-    git clone git@github.com:tzgued/laravel-angular-skeleton.git ChooseAProjectName
-    ```
+or this line if you are using ssh:
+```
+git clone git@github.com:tzgued/laravel-angular-skeleton.git ChooseAProjectName
+```
 ### 2- Setting up the environement variables
 
     - Copy the `docker/.env.example` file into `docker/.env`
@@ -31,8 +29,8 @@ This project is a docktorized skeleton for a laravel and angular Application.
 
 ### 3- Create docker containers
 
-    - `cd ' into the `docker ` folder
-    - exacute `docker-compose up -d `
+    - `cd ` into the `docker ` folder
+    - execute `docker-compose up -d `
     - Sit back and relax for a while
 
     What this will do ? This will:
@@ -40,5 +38,20 @@ This project is a docktorized skeleton for a laravel and angular Application.
         - Create the containers using the `docker-compose.yml ` file, and the `config ` and `Dockerfiles `
         - Install tools needed inside the containers
 
-### 4 Installing dependencies
+### 4- SSH into container
 
+    Now we have our main container tha has all what needed to run the app: apache, php, node, angular CLI, ...
+    We need to ssh into the container and install composer and npm dependencies.
+    To ssh into a docker container use:
+
+    `docker exec -it Container_Name bash`
+
+    Gitbash users on widows might need to add `winpty` for the command to work
+
+    `winpty docker exec -it Container_Name bash`
+
+### 5- Installing the dependencies
+> This step could be automated but I didn't for the perpose of learning and knowing what's happening :)
+
+    Inside the container, our working directory is `/var/www/html/`
+    So now we need to `cd ` into api and user `composer install ` and `npm install `
