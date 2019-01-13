@@ -26,13 +26,13 @@ Your projected is now cloned in the ChooseAProjectName directory
 
 ### 2 - Setting up the environement variables
 
-- Copy the `docker/.env.example` file into `docker/.env`
-- Copy the `api/.env.example` file into `api/.env`
+- Copy the `docker/.env.example` file into `docker/.env` => `cp docker/.env.example docker/.env`
+- Copy the `api/.env.example` file into `api/.env` => `cp api/.env.example api/.env`
 - Change the variables in each file as it suits you (if you are new to this, and you have no server running on your machine, you can use the default environnement variables)
 
 ### 3 - Create docker containers
 
-- `cd ` into the `docker ` folder
+- `cd ` into the `docker ` folder    
 - execute `docker-compose up -d `
 - Sit back and relax for a while
 
